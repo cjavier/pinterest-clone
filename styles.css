@@ -1,0 +1,204 @@
+/* Ajustes generales */
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 20px;
+    position: relative;
+  z-index: 10;
+}
+
+.header-logo img {
+    max-height: 40px;
+    margin-right: 20px;
+}
+
+.header-nav .nav-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-nav .nav-link.active {
+    background-color: #000; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border-radius: 20px;
+}
+
+.search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Borde redondeado para la barra de búsqueda */
+}
+
+.header-notifications {
+    display: flex;
+    align-items: center;
+}
+
+.notification-bell,
+.notification-messages,
+.user-profile {
+    position: relative;
+    margin-left: 20px;
+}
+
+.notification-bell img,
+.notification-messages img,
+.user-profile img {
+    max-height: 24px; 
+}
+
+.notification-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e60023;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+}
+
+
+/* Estilo de la galería con Flexbox */
+.gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column .gallery-item {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .column img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .column {
+    margin: 10px;
+  }
+
+  /* Estilo para tabletas (suponiendo una pantalla mínima de 768px) */
+@media (min-width: 768px) {
+    .gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .column {
+      flex-basis: calc(33% - 10px); 
+      margin: 5px;
+    }
+  }
+  
+  /* Estilo para pantallas de escritorio (suponiendo una pantalla mínima de 1024px) */
+  @media (min-width: 1024px) {
+    .column {
+      flex-basis: calc(16.66% - 10px); 
+    }
+  }
+
+    /* Estilo de los hove elements */
+
+  .hover-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .gallery-item:hover .hover-elements {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .btn-save {
+    background-color: #e60023; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    position: absolute;
+  top: 10px; 
+  right: 10px; 
+}
+  
+  .btn-save:hover {
+    background-color: #cc001f; 
+  }
+  
+  .bottom-buttons {
+    display: flex; 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .bottom-buttons button:first-child {
+    margin-left: 0;
+  }
+  
+  .image-alt {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    color: white;
+    font-size: 14px; 
+  }
+
+  .btn-link, .btn-more {
+    background-color: #dfdfdf; 
+    color: black;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px; 
+  }
+  
+  .btn-link:hover, .btn-more:hover {
+    background-color: #ededed; 
+  }
